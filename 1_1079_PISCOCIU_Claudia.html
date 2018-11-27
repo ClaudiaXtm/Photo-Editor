@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Mini Editor Foto</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js" crossorigin="anonymous"></script>
+	<script src="1_1079_PISCOCIU_Claudia.js"></script>
+	<script src="lib/draganddrop.js"></script>
+	<script src="increase.js"></script>
+	<link rel="stylesheet" type="text/css" href="1_1079_PISCOCIU_Claudia.css">
+	<link rel="shortcut icon" type="image/png" href="media/image-editing.png"/>	
+
+</head>
+
+<body>
+	<div id="bar">
+		<div id="circle1"></div>
+		<div id="circle2"></div>
+		<div id="circle3"></div>
+	
+	</div>
+	<div class="menu">
+		<li class="menu-item"><button id="btnScale" onclick="scaleImage()">Scale down</button></li>
+		<li class="menu-item"><button id="btnScaleUp" onclick="scaleUp()">Scale up</button>	</li>
+		<li class="menu-item"><button name="shape" id="line" value="Line" onclick="playSound()">Line</button></li>
+		<li class="menu-item"><button name="shape" id="rect" value="Rectangle" onclick="playSound()">Rectangle</button></li>
+		<li class="menu-item"><button name="shape" id="circle" value="Circle" onclick="playSound()">Circle</button></li>
+		<li class="menu-item" id="save"><button id="saveImage" onclick="playSound()"><a href="#" download="processedImage.png">Save Image</a></button></li>
+	</div>
+	<div class="dragtext">
+		<p>&darr; Drag and drop an image below &darr;</p>
+	</div>
+
+	<div class="editor">
+			<p></p>
+		<canvas id="canvasImage" width="1000px" height="300px"></canvas>
+		<audio id="canvasSound" src ="media/sound.wav" style="display:none;" />
+		<p id="output"></p>
+	</div>
+
+	<div class="footer">Made with &#10084; by Claudia</div>
+</body>
+</html>
+
